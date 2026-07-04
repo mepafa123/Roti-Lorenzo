@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra la tarjeta verticalmente si sobra espacio */
+    background-color: antiquewhite;
+    font-family: Poppins, sans-serif;
+    width: 100%;
+    min-height: 100vh; /* Se adapta al 100% de la altura de cualquier pantalla */
+    padding: 20px 0; /* Espacio extra para que no pegue a los bordes en móviles */
+}
+
+.cuerpotarjeta {
+    position: relative; /* Cambiado de absolute a relative */
+    width: 90%;
+    max-width: 500px; /* Evita que en PC se vea gigante */
+    min-height: auto; /* Deja que el contenido defina la altura */
+    display: flex;
+    flex-direction: column;
+    background: aquamarine;
+    border-radius: 15px; /* Opcional: queda mejor en móviles */
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    padding: 30px 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 5px #03a9f4;
+}
+
+h1 {
+    padding-top: 20px;
+    color: #03a9f4;
+    text-align: center;
+    font-size: 1.5rem; /* Tamaño ajustable */
+}
+
+hr {
+    border: 0;
+    height: 5px;
+    background: linear-gradient(to right, transparent, antiquewhite, transparent);
+    margin: 15px 0;
+}
+.contactos{
+    margin-bottom: 10px;
+}
+section, .contenido {
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px; /* Mucho más equilibrado para móviles */
+}
+.boton {
+    background-color: #03a9f4;
+    color: white;
+    border-radius: 80px;
+    width: 200px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.boton:hover {
+    background-color: #0288d1; /* Se oscurece un poco el azul */
+    transform: scale(1.05);    /* Se agranda un 5% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Agrega una sombra para dar profundidad */
+}
+a{
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    margin-bottom: 10px;
+}
+@media (max-width: 480px) {
+    section, .contenido {
+        padding: 15px 20px; /* Menos espacio lateral en pantallas muy angostas */
+        font-size: 14px; /* Ajusta el texto para que no desborde */
+    }
+    
+    img {
+        width: 120px; /* Imagen un poco más pequeña */
+        height: 120px;
+    }
+}
+
+/* Si el teléfono se pone en horizontal (poca altura) */
+@media (max-height: 500px) {
+    body {
+        align-items: flex-start; /* Permite scroll si la pantalla es muy bajita */
+    }
+}
