@@ -110,4 +110,46 @@ a{
     body {
         align-items: flex-start; /* Permite scroll si la pantalla es muy bajita */
     }
+/* ========================================= */ /* VENTANA DEL MENU DIARIO */ /* ========================================= */ .modal {
+    display: none;
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0; width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.80); 
+    /* Centrar el contenido */ 
+    justify-content: center; 
+    align-items: center; 
+    /* Permitir desplazamiento si la imagen es muy grande */ 
+    overflow: auto; } 
+    /* Contenedor de la imagen del menú */ 
+    .contenido-menu { 
+        position: relative; 
+        max-width: 90%; 
+        max-height: 90%;
+    } 
+    /* Imagen específica del menú */ 
+    .contenido-menu img { 
+        width: auto; 
+        height: auto; 
+        max-width: 90vw; 
+        max-height: 85vh; 
+        object-fit: contain; 
+        border-radius: 10px; 
+        border: none;
+    } 
+    /* Botón X para cerrar */ 
+    .cerrar { 
+        position: absolute; 
+        top: -45px; 
+        right: 0; 
+        color: white; 
+        font-size: 40px; 
+        font-weight: bold; 
+        cursor: pointer; 
+        line-height: 1;
+    } 
+    .cerrar:hover { 
+        color: #03a9f4;
+    }
 }
