@@ -26,5 +26,29 @@
             <a href="https://www.facebook.com/share/1BXauDBEBd/"target="_blank"><div class="boton">MI FACEBOOK</div></a>
         </section>
     </div>
+    ```html
+<script>
+
+function mostrarMenu() {
+    document.getElementById("ventanaMenu").style.display = "flex";
+}
+
+function cerrarMenu() {
+    document.getElementById("ventanaMenu").style.display = "none";
+}
+
+/* Cerrar al tocar fuera de la imagen */
+document.getElementById("ventanaMenu").addEventListener("click", function(event) {
+
+    /* Si se hizo clic directamente sobre el fondo oscuro */
+    if (event.target === this) {
+        cerrarMenu();
+    }
+
+});
+
+</script>
+```
+
 </body>
 </html>
